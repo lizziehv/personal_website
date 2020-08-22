@@ -3,8 +3,8 @@ import React from "react";
 
 const Banner = ({ siteTitle,  siteDescription }) => (
   <div className="banner">
-    <h1>{siteTitle}</h1>
-    <h2>{siteDescription}</h2>
+    <h2 className="title">{siteTitle}</h2>
+    <p className="description">{siteDescription}</p>
   </div>
 );
 
