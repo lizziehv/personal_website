@@ -5,7 +5,7 @@ const Banner = ({ siteTitle,  siteDescription }) => (
   <div className="banner">
     <h2 className="title">{siteTitle}</h2>
     <p className="description">{siteDescription}</p>
-  </div>
+  </div>  
 );
 
 Banner.propTypes = {

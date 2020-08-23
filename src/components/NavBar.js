@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useWindowDimensions } from "./util";
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import { Link } from 'gatsby';
 import { Menu } from 'react-feather';
 import IconBox from './IconBox';
@@ -24,7 +23,7 @@ const mainItems = [
         link: "/work/code_samples"
       }, 
       {
-        title: "Project",
+        title: "Projects",
         link: "/work/projects"
       },
       {
@@ -42,30 +41,40 @@ const renderOtherLinks = () => (
   </>
 );
 
-const NavBar = ({ showWork }) => {
+const NavBar = ({ active, onCollapse }) => {
   const { width } = useWindowDimensions();
   const [curtainDown, setCurtainDown] = useState(false);
   // returned collapsed
 
+  const toggleCurtainDown = () => {
+    setCurtainDown((prev) => !prev);
+    if(onCollapse) onCollapse();
+  }
+
   if(width < breakpt){
     if(curtainDown){
       return(
-        <div id="myNav" style={{width: '100%'}} class="overlay">
-          <button class="closebtn" onClick={() => setCurtainDown(false)}>&times;</button>
-          <div class="overlay-content">
+        <div className="overlay">
+          <button className="closebtn" onClick={toggleCurtainDown}>&times;</button>
+          <div className="overlay-content">
             {mainItems.map((item) => <Link to={item.link} className="nav-link">{item.title}</Link>)}
+            {renderOtherLinks()}
+            <div style={{width: "170px", marginTop: "100px"}}>
+              <IconBox />
+            </div>
           </div>
         </div>
       );
     } else {
       return(
         <Col xs={12}>
-          <Row>
+          <div className="nav-bar"> 
             <h2>Lizzie Hernandez</h2>
-            <button onClick={() => setCurtainDown(true)}>
+            <div style={{width: '20px'}}/>
+            <button onClick={toggleCurtainDown}>
               <Menu size={25} />
             </button>
-          </Row>
+          </div>
         </Col>
       );
     }
@@ -80,7 +89,7 @@ const NavBar = ({ showWork }) => {
             {mainItems.map((item) => (
               <>
                 <Link to={item.link} className="nav-link">{item.title}</Link>
-                {showWork && item.subItems &&
+                {active === item.title && item.subItems &&
                   <>
                     {item.subItems.map((subIt) => (
                       <Link to={subIt.link} className="nav-link nav-link2">{subIt.title}</Link>
@@ -99,7 +108,8 @@ const NavBar = ({ showWork }) => {
 }
 
 NavBar.defaultProps = {
-  showWork: false,
+  active: '',
+  onCollapse: null
 }
 
 export default NavBar;
