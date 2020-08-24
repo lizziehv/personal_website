@@ -5,7 +5,7 @@ $dark-blue: #0b3368;
 $blue: #3061a1;
 $light-pink: #fca897;
 $light-blue: #56cad0;
-$overlay-blue: rgba(11, 51, 104, 0.5);
+$overlay-blue: rgba(22, 64, 120, 0.5);
 $yellow: #ffcc40;
 
 html,
@@ -127,8 +127,13 @@ a:hover {
   top: 10px;
   right: 8%;
 }
-  
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+.overlay-content .nav-link {
+  text-decoration: none;
+  color: $dark-blue;
+  font-size: 25px;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
 }
@@ -147,7 +152,6 @@ a:hover {
 }
 
 .nav-link {
-  font-family: Comfortaa;
   text-decoration: none;
   color: $dark-blue;
   font-size: 20px;
@@ -281,4 +285,52 @@ a:hover {
   @media screen and (max-width: 720px){
     opacity: 0;
   }
+}
+
+/* Art Portfolio */
+.gallery-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.gallery-row img {
+  height: 100%;
+  width: auto;
+  text-align: center;
+}
+
+/* project card */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card img {
+  width: 55%;
+  height: auto;
+  border-radius: 20px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 25px;
+}
+
+.project-card img:hover {
+  opacity: 0.5;
+}
+
+.project-card p, h2 {
+  margin-top: 20px;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.project-card p {
+  color: $blue;
 }

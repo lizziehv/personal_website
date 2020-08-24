@@ -28,7 +28,7 @@ const mainItems = [
       },
       {
         title: "Art Portfolio",
-        link: "/work/code_samples"
+        link: "/work/art_portfolio"
       }
     ]
   }

@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import NavBar from '../../components/NavBar';
 import Banner from '../../components/Banner';
-// import Card from '../../components/Card';
 import Footer from '../../components/Footer';
 
 const siteTitle = `Code Samples`;
