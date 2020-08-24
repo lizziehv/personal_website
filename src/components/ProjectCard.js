@@ -1,15 +1,17 @@
-import PropTypes from "prop-types"
 import React from "react";
+import Col from 'react-bootstrap/Col';
 
 const ProjectCard = ({ title,  img, description, link }) => (
   <Col xs={12} sm={6} lg={4} >
-    <a href={link}>
-      <div className="project-card">
-        <img src={img} alt="" />
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </div>
-    </a>
+    <div style={{paddingTop: '20px', height: '100%'}}>
+      <a href={link} target="_blank" rel="noreferrer">
+        <div className="project-card">
+          <img src={img} alt="" />
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+      </a>
+    </div>
   </Col>  
 );
 

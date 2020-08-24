@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 import NavBar from '../components/NavBar';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 const siteTitle = `Hi, I'm Lizzie!`;
 const siteDescription = 'I am a Dartmouth College student studying Computer Science and Mathematics. I am passionate about technology, math, and art. Scroll down to see more!';
