@@ -25,20 +25,26 @@ const ProjectsPage = () => {
           <Col xs={12} sm={8} >
             <Banner siteTitle={siteTitle} siteDescription={siteDescription} />
             <Row>
-              <Col xs={12} sm={6} lg={4} className="project-card" >
-                <img src={require("../../static/images/projects/unmasked-logo.png")} alt="" />
-                <h2>Unmasked Project</h2>
-                <p>Unmasked is an anonymous mental health app for students in 13 colleges with 3,000+ users. I work in the development team, using React Native and Redux.</p>
+              <Col xs={12} sm={6} lg={4} >
+                <div className="project-card">
+                  <img src={require("../../static/images/projects/unmasked-logo.png")} alt="" />
+                  <h2>Unmasked Project</h2>
+                  <p>Unmasked is an anonymous mental health app for students in 13 colleges with 3,000+ users. I work in the development team, using React Native and Redux.</p>
+                </div>
               </Col>
-              <Col xs={12} sm={6} lg={4} className="project-card" >
-                <img src={require("../../static/images/projects/linear-games.png")} alt="" />
-                <h2>Linear Games</h2>
-                <p>I collaborated in the design and development of games based on concepts in linear algebra to teach students math in an interactive setting. I used HTML/CSS and JavaScript.</p>
+              <Col xs={12} sm={6} lg={4} >
+                <div className="project-card">
+                  <img src={require("../../static/images/projects/linear-games.png")} alt="" />
+                  <h2>Linear Games</h2>
+                  <p>I collaborated in the design and development of games based on concepts in linear algebra to teach students math in an interactive setting. I used HTML/CSS and JavaScript.</p>
+                </div>
               </Col>
-              <Col xs={12} sm={6} lg={4} className="project-card" >
-                <img src={require("../../static/images/projects/mood-triggers.png")} alt="" />
-                <h2>Mood Triggers App</h2>
-                <p>I am currently working on the development team of Mood Triggers, a mobile app for behavioral data analysis which collects data to provide an account of users' health behaviors. More to come soon!</p>
+              <Col xs={12} sm={6} lg={4} >
+                <div className="project-card">
+                  <img src={require("../../static/images/projects/mood-triggers.png")} alt="" />
+                  <h2>Mood Triggers App</h2>
+                  <p>I am currently working on the development team of Mood Triggers, a mobile app for behavioral data analysis which collects data to provide an account of users' health behaviors. More to come soon!</p>
+                </div>
               </Col>
             </Row>
             <Row>
