@@ -42,7 +42,8 @@ const renderOtherLinks = () => (
 );
 
 const NavBar = ({ active, onCollapse }) => {
-  const width = (typeof window !== `undefined`) ? useWindowDimensions().width : breakpt;
+  const dimensions = useWindowDimensions();
+  const width = dimensions ? dimensions.width : breakpt;
   const [curtainDown, setCurtainDown] = useState(false);
 
   const toggleCurtainDown = () => {
@@ -68,7 +69,7 @@ const NavBar = ({ active, onCollapse }) => {
       return(
         <Col xs={12}>
           <div className="nav-bar"> 
-            <h2>Lizzie Hernandez</h2>
+            <h2 style={{textAlign: 'left'}}>Lizzie Hernandez</h2>
             <div style={{width: '20px'}}/>
             <button onClick={toggleCurtainDown}>
               <Menu size={25} />
