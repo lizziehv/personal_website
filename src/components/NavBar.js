@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useWindowDimensions } from "./util";
 import Col from 'react-bootstrap/Col';
 import { Link } from 'gatsby';
@@ -45,13 +45,6 @@ const NavBar = ({ active, onCollapse }) => {
   const dimensions = useWindowDimensions();
   const width = dimensions ? dimensions.width : breakpt;
   const [curtainDown, setCurtainDown] = useState(false);
-  const [didMount, setDidMount] = useState(false);
-
-  useEffect(() => {
-    if(!didMount){
-      setDidMount(true);
-    }
-  }, [didMount]);
 
   const toggleCurtainDown = () => {
     setCurtainDown((prev) => !prev);
@@ -76,10 +69,9 @@ const NavBar = ({ active, onCollapse }) => {
       return(
         <Col xs={12}>
           <div className="nav-bar"> 
-            <h2 style={{textAlign: 'left'}}>Lizzie Hernandez</h2>
-            <div style={{width: '20px'}}/>
+            <h2 style={{textAlign: 'left', width: '60%'}}>Lizzie Hernandez</h2>
             <button onClick={toggleCurtainDown}>
-              {didMount && <Menu size={25} />}
+              <Menu size={25} />
             </button>
           </div>
         </Col>
