@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useWindowDimensions } from "./util";
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import { Link } from 'gatsby';
 import { Menu } from 'react-feather';
 import IconBox from './IconBox';
@@ -46,6 +45,13 @@ const NavBar = ({ active, onCollapse }) => {
   const dimensions = useWindowDimensions();
   const width = dimensions ? dimensions.width : breakpt;
   const [curtainDown, setCurtainDown] = useState(false);
+  const [didMount, setDidMount] = useState(false);
+
+  useEffect(() => {
+    if(!didMount){
+      setDidMount(true);
+    }
+  }, [didMount]);
 
   const toggleCurtainDown = () => {
     setCurtainDown((prev) => !prev);
@@ -69,13 +75,13 @@ const NavBar = ({ active, onCollapse }) => {
     } else {
       return(
         <Col xs={12}>
-          <Row className="nav-bar"> 
+          <div className="nav-bar"> 
             <h2 style={{textAlign: 'left'}}>Lizzie Hernandez</h2>
             <div style={{width: '20px'}}/>
             <button onClick={toggleCurtainDown}>
-              <Menu size={25} />
+              {didMount && <Menu size={25} />}
             </button>
-          </Row>
+          </div>
         </Col>
       );
     }
