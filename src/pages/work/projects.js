@@ -21,7 +21,7 @@ const ProjectsPage = () => {
   return (
       <Container fluid className="no-padding">
       <Row>
-        <NavBar active="Work" onCollapse={toggleCurtainDown}/>
+        <NavBar active="Work" onCollapse={toggleCurtainDown} />
         {!curtainDown &&
           <Col xs={12} sm={8} >
             <Banner siteTitle={siteTitle} siteDescription={siteDescription} />

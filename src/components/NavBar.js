@@ -42,9 +42,8 @@ const renderOtherLinks = () => (
 );
 
 const NavBar = ({ active, onCollapse }) => {
-  const { width } = useWindowDimensions();
+  const width = (typeof window !== `undefined`) ? useWindowDimensions().width : breakpt;
   const [curtainDown, setCurtainDown] = useState(false);
-  // returned collapsed
 
   const toggleCurtainDown = () => {
     setCurtainDown((prev) => !prev);

@@ -62,6 +62,14 @@ const CodeSamplesPage = () => {
                 description="A simple PacMan game written in Python"
                 link="https://github.com/lizziehv/py-pacman"
               />
+              <Row>
+                <div className="citations">
+                  <h2>Honors/Citations</h2>
+                  <p>
+                    "The real measure of enthusiasm of a student to learn the material is the energy they put into doing extra credit. The quality of work that Lizzie has done for extra credit is awe inspiring. In the three terms that I have taught this course I have not seen work that is as good as Lizzie’s work in quality." ~ Dartmouth Faculty
+                  </p>
+                </div>
+              </Row>
             </Row>
             <Row>
               <Footer />

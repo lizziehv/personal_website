@@ -44,7 +44,7 @@ const AboutPage = () => (
         </Row>
         <hr />
         <Row>
-          <Col xs={12} sm={{size: 3, offset: 0}}>
+          <Col xs={12} sm={{span: 4, offset: 1}}>
             <div className="about-section">
               <h2 style={{textAlign: 'left'}}>
                 Languages
@@ -60,7 +60,7 @@ const AboutPage = () => (
               </ul>
             </div>
           </Col>
-          <Col xs={12} sm={{size: 5, offset: 0}}>
+          <Col xs={12} sm={{span: 5, offset: 1}}>
             <div className="about-section">
               <h2 style={{textAlign: 'left'}}>
                 Achievements
@@ -76,7 +76,7 @@ const AboutPage = () => (
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={{size: 4, offset: 0}}>
+          <Col xs={12} sm={{span: 4, offset: 1}}>
             <div className="about-section">
               <h2 style={{textAlign: 'left'}}>
                 Activities
@@ -90,7 +90,7 @@ const AboutPage = () => (
               </ul>
             </div>
           </Col>
-          <Col xs={12} sm={{size: 3, offset: 0}}>
+          <Col xs={12} sm={{span: 5, offset: 1}}>
             <div className="about-section">
               <h2 style={{textAlign: 'left'}}>
                 Other skills & interests
