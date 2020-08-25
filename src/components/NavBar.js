@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useWindowDimensions } from "./util";
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import { Link } from 'gatsby';
 import { Menu } from 'react-feather';
 import IconBox from './IconBox';
@@ -68,13 +69,13 @@ const NavBar = ({ active, onCollapse }) => {
     } else {
       return(
         <Col xs={12}>
-          <div className="nav-bar"> 
+          <Row className="nav-bar"> 
             <h2 style={{textAlign: 'left'}}>Lizzie Hernandez</h2>
             <div style={{width: '20px'}}/>
             <button onClick={toggleCurtainDown}>
               <Menu size={25} />
             </button>
-          </div>
+          </Row>
         </Col>
       );
     }
