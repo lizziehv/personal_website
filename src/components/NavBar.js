@@ -56,7 +56,12 @@ const NavBar = ({ active, onCollapse }) => {
     if(curtainDown){
       return(
         <div className="overlay">
-          <button className="closebtn" onClick={toggleCurtainDown}>&times;</button>
+          <div className="nav-bar" style={{display: 'flex', flexDirection: 'row'}}> 
+            <h2 style={{textAlign: 'left', width: '75%', visibility: 'hidden'}}>Lizzie Hernandez</h2>
+            <button onClick={toggleCurtainDown} className="closebtn">
+              &times;
+            </button>
+          </div>
           <div className="overlay-content">
             {mainItems.map((item) => <Link to={item.link} className="nav-link">{item.title}</Link>)}
             {renderOtherLinks()}
@@ -70,9 +75,8 @@ const NavBar = ({ active, onCollapse }) => {
       return(
         <Col xs={12}>
           <div className="nav-bar" style={{display: 'flex', flexDirection: 'row'}}> 
-            <h2>Lizzie Hernandez</h2>
-            <div style={{width: '20px'}}/>
-            <button onClick={toggleCurtainDown}>
+            <h2 style={{textAlign: 'left', width: '75%'}}>Lizzie Hernandez</h2>
+            <button onClick={toggleCurtainDown} className="icon">
               <Menu size={25} />
             </button>
           </div>
