@@ -29,6 +29,10 @@ const mainItems = [
       {
         title: "Art Portfolio",
         link: "/work/art_portfolio"
+      },
+      {
+        title: "Citations",
+        link: "/work/citations"
       }
     ]
   }

@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Marck+Script&display=swap);
 
 $dark-blue: #0b3368;
 $blue: #3061a1;
@@ -66,7 +66,7 @@ a:hover {
 
 hr {
   width: 90%;
-  height: 5px;
+  height: 3px;
   border-width: 2px;
 }
 
@@ -312,6 +312,11 @@ hr {
   padding-top: 30px;
   text-align: center;
   color: $gray;
+
+  @media screen and (max-width: 1200px){
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 .citations p {
@@ -320,6 +325,12 @@ hr {
 
 .citations h2 {
   font-size: 17px;
+}
+
+.citations span {
+  font-size: 27px;
+  color: #e3593d;
+  font-family: 'Marck Script', cursive;
 }
 
 .gallery-arrow {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../static/styles/main.scss";
 
@@ -45,6 +45,7 @@ class IndexPage extends React.Component {
               </Row>
               <Row>
                 <Card title="Art Portfolio" image={require("../static/images/drawing-cover.png")} link="/work/art_portfolio/" />
+                <Card title="Citations" image={require("../static/images/citations.png")} link="/work/citations/" />
               </Row>
               <Row>
                 <Footer />
