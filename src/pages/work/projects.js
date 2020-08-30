@@ -50,6 +50,12 @@ const ProjectsPage = () => {
                 description="This is a program, written in C and using SDL, that creates and solves sudoku and samurai sudokus using a backtracking algorithm with some improvements in term of efficiency."
                 link="https://github.com/lizziehv/cs50-sudoku/tree/master/extra-credit"
               />
+              <ProjectCard
+                title="Moose Tracks Design"
+                img={require("../../static/images/projects/moose.png")}
+                description="I collaborated on researching user experience to design and prototype a platform for requesting and providing rides to other students."
+                link="https://www.figma.com/proto/gPCWKB7oNjccaKdxmGBwae/cs-67?node-id=463%3A2627&scaling=min-zoom"
+              />
             </Row>
             <Row>
               <Footer />

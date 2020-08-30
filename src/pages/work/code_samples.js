@@ -29,13 +29,13 @@ const CodeSamplesPage = () => {
               <ProjectCard
                 title="Tiny Search Engine"
                 img={require("../../static/images/code-samples/search-engine.png")}
-                description="This Tiny Search Engine is a program written in C which crawls internet pages to satisfy queries and ranks them according to relevance."
+                description="This tiny search engine is a program written in C which crawls internet pages to satisfy users' queries and ranks them according to relevance."
                 link="https://github.com/lizziehv/tiny-search-engine"
               />
               <ProjectCard
                 title="Huffman Encoding"
                 img={require("../../static/images/code-samples/huffman.png")}
-                description="A Java library to compress and decompress text files and images using bit writer and reader"
+                description="This Java library utilizes Huffman coding algorithm to compress and decompress text files and images. It is implemented using i/o streams for compressed data storage."
                 link="https://github.com/lizziehv/huffman-encoding"
               />
               <ProjectCard
@@ -47,30 +47,28 @@ const CodeSamplesPage = () => {
               <ProjectCard
                 title="Viterbi"
                 img={require("../../static/images/code-samples/markov.png")}
-                description="This is a Java program which uses a Viterbi algorithm to determine the parts of speech of each word in a given sentence."
+                description="The Part of Speech Tagger is a Java program and interface which uses a Viterbi algorithm to determine the parts of speech of each word in a given sentence."
                 link="https://github.com/lizziehv/viterbi"
               />
               <ProjectCard
                 title="Matrix Labyrinth"
                 img={require("../../static/images/code-samples/labyrinth.png")}
-                description="Game based on concepts in linear algebra, developed using Javascript"
+                description="Matrix Lanyrinth is a game based on concepts in linear algebra, developed using Javascript, and designed to teach matrix multiplication."
                 link="https://github.com/lizziehv/linear-games"
               />
               <ProjectCard
                 title="PacMan"
                 img={require("../../static/images/code-samples/pacman.png")}
-                description="A simple PacMan game written in Python"
+                description="This is a simple PacMan game written in Python."
                 link="https://github.com/lizziehv/py-pacman"
               />
-              <Row>
-                <div className="citations">
-                  <h2>Honors/Citations</h2>
-                  <p>
-                    "The real measure of enthusiasm of a student to learn the material is the energy they put into doing extra credit. The quality of work that Lizzie has done for extra credit is awe inspiring. In the three terms that I have taught this course I have not seen work that is as good as Lizzie’s work in quality." ~ Dartmouth Faculty
-                  </p>
-                </div>
-              </Row>
             </Row>
+            <div className="citations">
+              <h2>Honors/Citations</h2>
+              <p>
+                "The real measure of enthusiasm of a student to learn the material is the energy they put into doing extra credit. The quality of work that Lizzie has done for extra credit is <span>awe inspiring</span>. In the three terms that I have taught this course I have not seen work that is as good as Lizzie’s work in <span>quality</span>." ~ Dartmouth Faculty
+              </p>
+            </div>
             <Row>
               <Footer />
             </Row>

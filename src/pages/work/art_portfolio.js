@@ -65,14 +65,12 @@ const ArtPortfolio = () => {
           <Col xs={12} sm={8} >
             <Banner siteTitle={siteTitle} siteDescription={siteDescription} />
             <Gallery photos={photos} />
-            <Row>
-              <div className="citations">
-                <h2>Honors/Citations</h2>
-                <p>
-                  "Lizzie Hernandez Videa '22 - is commended for excellence in Studio Art 15, Drawing I. Her drawings were of consistently high quality both in conception and execution. Lizzie has a remarkable ability to transform drawing media into unique surfaces, lights, and forms. Her final series of drawings were large portraits of her friends who are international students. Lizzie shows great potential as an artist." ~ Pamela Thompson, Studio Art professor
-                </p>
-              </div>
-            </Row>
+            <div className="citations">
+              <h2>Honors/Citations</h2>
+              <p>
+                "Lizzie Hernandez Videa '22 is commended for <span>excellence</span> in Studio Art 15, Drawing I. Her drawings were of consistently <span>high quality</span> both in conception and execution. Lizzie has a remarkable ability to transform drawing media into unique surfaces, lights, and forms. Her final series of drawings were large portraits of her friends who are international students. Lizzie shows <span>great potential</span> as an artist." ~ Pamela Thompson, Studio Art professor
+              </p>
+            </div>
             <Row>
               <Footer />
             </Row>
