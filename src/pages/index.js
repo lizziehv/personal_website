@@ -9,9 +9,10 @@ import NavBar from '../components/NavBar';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
+import ReactGa from 'react-ga';
 
 const siteTitle = `Hi, I'm Lizzie!`;
-const siteDescription = 'I am a Dartmouth College student studying Computer Science and Mathematics. I am passionate about technology, math, and art. Scroll down to see more!';
+const siteDescription = 'I am a Dartmouth College student studying Computer Science and Mathematics. I am passionate about technology, math, and art. Click on a tile to see more!';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -23,6 +24,8 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount(){
+    ReactGa.initialize('UA-176826281-1');
+    ReactGa.pageview(window.location.pathname);
     this.setState({mounted: true});
   }
 
